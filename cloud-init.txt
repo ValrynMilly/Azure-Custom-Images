@@ -1,0 +1,11 @@
+#cloud-config
+package_upgrade: true
+packages:
+  - python3-pip
+  - jq
+  - git
+runcmd:
+  - git clone https://github.com/ValrynMilly/Azure-Custom-Images.git
+  - pip3 install -r requirements.txt
+  - sudo systemctl daemon-reload
+  - sudo waagent -deprovision+user -force
