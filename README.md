@@ -15,7 +15,7 @@ sudo apt update
 
 sudo apt install python3-pip cd Azure-Custom-Image 
 
-sudo pip3 -r requirements.txt vim /tmp/app.service [Unit] Description=App start up
+sudo pip3 -r requirements.txt 
 
 ## Create Image
 az vm deallocate -g CIRG -n VMname
